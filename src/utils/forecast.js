@@ -32,6 +32,7 @@ const getWeatherForecast = (lat, long, callback) => {
             const daily = body.daily.data;
 
             const data = {
+                summary: currently.summary,
                 currentTemp: currently.temperature,
                 precipProbability: currently.precipProbability,
                 high: daily[0].temperatureHigh,

@@ -7,6 +7,7 @@ const highTemp = document.querySelector('#highTemp');
 const lowTemp = document.querySelector('#lowTemp');
 const precip = document.querySelector('#precip');
 const forecastDiv = document.querySelector('.hidden');
+const summary = document.querySelector('#summary');
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -23,7 +24,7 @@ weatherForm.addEventListener('submit', (event) => {
                     } else {
                         forecastDiv.classList.remove('hidden');
                         message1.textContent = jsonData.place_name;
-                        // currentTemp.textContent = JSON.stringify(jsonData.forecast);
+                        summary.textContent = jsonData.forecast.summary;
                         currentTemp.textContent = jsonData.forecast.currentTemp;
                         highTemp.textContent = jsonData.forecast.high;
                         lowTemp.textContent = jsonData.forecast.low;
