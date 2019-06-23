@@ -19,7 +19,12 @@
       <button type="submit">Submit</button>
     </form>
     <p id="errMsg"></p>
-    <p id="forecast"></p>
+    <div class="hidden">
+      <p>Curent Temperature is: <span id="currentTemp"></span></p>
+      <p>High Temp for Today: <span id="highTemp"></span></p>
+      <p>Low Temp for Today: <span id="lowTemp"></span></p>
+      <p>Chance of Precipitation: <span id="precip"></span>%</p>
+    </div>
   </div>
 
   {{>footer}}

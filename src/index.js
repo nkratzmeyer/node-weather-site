@@ -11,6 +11,9 @@ const publicDirectory = path.join(__dirname, '../public');
 const viewsDirectory = path.join(__dirname, '../templates/views');
 const partialsDirectory = path.join(__dirname, '../templates/partials');
 
+//Get port to use
+const port = process.env.PORT || 3000;
+
 const app = express();
 
 //Set up handlebars template engine
@@ -29,14 +32,14 @@ app.get('', (req, res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'The about page',
+        title: 'About',
         name: 'Nathan Kratzmeyer'
     });
 });
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'The help page',
+        title: 'Help',
         name: 'Nathan Kratzmeyer'
     });
 });
@@ -90,6 +93,6 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(3000, () => {
-    console.log('Started on 3000');
+app.listen(port, () => {
+    console.log(`Started on ${port}`);
 });
