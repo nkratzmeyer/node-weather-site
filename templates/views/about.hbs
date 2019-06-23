@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,16 @@
     <link rel="stylesheet" href="style.css">
     <title>About</title>
 </head>
+
 <body>
     <div class="main-content">
-   {{>header}}
-       <img class="portrait" src="me.jpg" alt="my picture">
+        {{>header}}
+        <p>This site was created by Nathan Kratzmeyer as part of the Complete Nodejs Developer course.</p>
+        <p>The app uses geodata from <a href="http://mapbox.com">Mapbox.com</a> and forecast data from <a href="http://darksky.net">DarkSky.net</a></p>
+        <img class="portrait" src="me.jpg" alt="my picture">
     </div>
 
-   {{>footer}}
+    {{>footer}}
 </body>
+
 </html>
